@@ -1,8 +1,9 @@
 import numpy 
 import requests
 
-r = requests.get("http://comic.naver.com")
+from urlTamperable import crackhubScene_Filter, crackhub_Filter
 
-print(r.content) 
+search = str(input("Enter Search: "))
 
-
+crackhub_Filter.crackhubSearch(search)
+crackhubScene_Filter.crackhubSceneSearch(search)

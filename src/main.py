@@ -1,7 +1,8 @@
 import numpy 
 import requests
 
-from urlTamperable import crackhubScene_Filter, crackhub_Filter, gloadFilter, gogGamesFilter, ovagamesFilter, chovkaRepackFilter
+from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter
+from urlTamperable.Repacks import chovkaRepackFilter
 
 search = str(input("Enter Search: "))
 

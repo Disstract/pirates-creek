@@ -16,6 +16,8 @@ def chovkaSearch(search):
                 results.append(link[i].attrs['href'])
             except:
                 pass
+        if results == []:
+            results.append("Nothing Found")
         return(results)
     except:
         return("Chovka Repacks: Connection Failed!")

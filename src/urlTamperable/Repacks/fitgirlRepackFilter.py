@@ -1,18 +1,18 @@
 from requests_html import HTMLSession
 import time
 
-def crackhubSearch(search):
+def fitgirlSearch(search):
 	results = []
 	try:
 		session = HTMLSession()
-		r = session.get("https://crackhub.site/?s="+search)
+		r = session.get("https://fitgirl-repacks.site/?s="+search)
 
 		titles = r.html.find('.entry-title')
 		try:
 			link = r.html.find('.entry-title a')
 		except:
 			pass
-        
+		
 		for i in range(0, len(titles)):
 			results.append(titles[i].text)
 			try:
@@ -23,6 +23,5 @@ def crackhubSearch(search):
 			results.append("Nothing Found")
 		return(results)
 	except:
-		return("Crackhub: Connection Failed!")
-    
-
+		return("Fitgirl Repacks: Connection Failed!")
+		

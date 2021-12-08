@@ -2,7 +2,7 @@ import numpy
 import requests
 
 from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter
-from urlTamperable.Repacks import chovkaRepackFilter
+from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter
 
 search = str(input("Enter Search: "))
 
@@ -29,6 +29,11 @@ print(ovaGamesResults)
 chovkaRepackResults = chovkaRepackFilter.chovkaSearch(search)
 print(" ")
 print(chovkaRepackResults)
+
+fitgirlRepackResults = fitgirlRepackFilter.fitgirlSearch(search)
+print(" ")
+print(fitgirlRepackResults)
+
 
 
 

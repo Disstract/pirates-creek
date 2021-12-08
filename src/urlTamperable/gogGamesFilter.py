@@ -3,6 +3,7 @@ from requests_html import HTMLSession
 import time
 
 def gogGamesSearch(search):
+    results = []
     try:
         session = HTMLSession()
         r = session.get("https://gog-games.com/search/"+search)
@@ -10,19 +11,14 @@ def gogGamesSearch(search):
         titles = r.html.find('.title')
         link = r.html.find('.block')
 
-        print("\n-----------!!GOG Games!!-----------")
         if titles == []:
-            print("Nothing Found")
-            print("------------------------------")
+            results.append("Nothing Found")
         else:
             for i in range(0, len(titles)):
                 
-                print(titles[i].text)
-                print("https://gog-games.com"+link[i].attrs['href'])
-
-                print("------------------------------")
+                results.append(titles[i].text)
+                results.append("https://gog-games.com"+link[i].attrs['href'])
                 time.sleep(0.05)
+        return(results)
     except:
-        print("\n-----------!!GOG Games!!-----------")
-        print("Couldn't connect")
-        print("------------------------------")
+        return("GOG Games: Connection Failed!")

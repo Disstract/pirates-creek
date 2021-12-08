@@ -2,6 +2,7 @@ from requests_html import HTMLSession
 import time
 
 def chovkaSearch(search):
+    results = []
     try:
         session = HTMLSession()
         r = session.get("https://repack.info/search/"+search)
@@ -9,16 +10,12 @@ def chovkaSearch(search):
         titles = r.html.find('.title')
         link = r.html.find('.text-dark')
 
-        print("\n-----------!!Chovka Repacks!!-----------")
         for i in range(0, len(titles)):
-            print(titles[i].text)
+            results.append(titles[i].text)
             try:
-                print(link[i].attrs['href'])
+                results.append(link[i].attrs['href'])
             except:
                 pass
-            print("------------------------------")
-            time.sleep(0.05)
+        return(results)
     except:
-        print("\n-----------!!Chovka Repacks!!-----------")
-        print("Couldn't connect")
-        print("------------------------------")
+        return("Chovka Repacks: Connection Failed!")

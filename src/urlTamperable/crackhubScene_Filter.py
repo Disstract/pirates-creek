@@ -3,6 +3,7 @@ import time
 
 # search = str(input("Enter Search: "))
 def crackhubSceneSearch(search):
+    results = []
     try:
         session = HTMLSession()
         r = session.get("https://scene.crackhub.site/?s="+search)
@@ -13,17 +14,13 @@ def crackhubSceneSearch(search):
         except:
             pass
 
-        print("\n-----------!!Crackhub Scene!!-----------")
         for i in range(0, len(titles)):
-            print(titles[i].text)
+            results.append(titles[i].text)
             try:
-                print(link[i].attrs['href'])
+                results.append(link[i].attrs['href'])
             except:
                 pass
-            print("------------------------------")
-            time.sleep(0.05)
+            return(results)
     except:
-        print("\n-----------!!Crackhub Scene!!-----------")
-        print("Couldn't connect")
-        print("------------------------------")
+        return("Crackhub Scene: Connection Failed!")
 

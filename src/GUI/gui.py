@@ -1,12 +1,11 @@
 from tkinter import *
-
-class Window(Frame):
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.master = master
+from tkinter import ttk
 
 root = Tk()
-app = Window(root)
 
-root.wm_title("Pirate Ship")
+frame = ttk.Frame(root, padding=10)
+frame.grid()
+
+ttk.Entry
+
 root.mainloop()

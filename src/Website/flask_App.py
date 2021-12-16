@@ -7,3 +7,10 @@ def main():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+    '''
+    $ export FLASK_APP=flask_App.py
+    $ export FLASK_ENV=development
+    $ flask run
+    
+    '''

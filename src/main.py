@@ -32,8 +32,7 @@ print(chovkaRepackResults)
 
 fitgirlRepackResults = fitgirlRepackFilter.fitgirlSearch(search)
 print(" ")
-print(fitgirlRepackResults)  
-
+print(fitgirlRepackResults)
 
 
 

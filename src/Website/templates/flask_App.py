@@ -14,5 +14,5 @@ if __name__ == "__main__":
     $ export FLASK_APP=flask_App.py
     $ flask run
     or just run thur idle if it doesn't work
-        '''
+    '''
     

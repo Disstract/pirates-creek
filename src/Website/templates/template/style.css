@@ -1,0 +1,85 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter var", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #141718;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.title {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 900;
+  font-size: 75px;
+
+  color: #fae8e0;
+  
+  animation: tilting 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.title span {
+  transition: font-weight 0.5s ease-in;
+  animation: floating-secondary 2.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+
+.title span:nth-child(1) {
+  animation-delay: 1s;
+}
+.title span:nth-child(2) {
+  animation-delay: 2s;
+}
+.title span:nth-child(3) {
+  animation-delay: 3s;
+}
+.title span:nth-child(4) {
+  animation-delay: 4s;
+}
+
+.title span:hover {
+  font-weight: 100;
+}
+
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 5vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floating-secondary {
+  0% {
+    transform: translate(0, 0) rotate(2deg);
+  }
+  50% {
+    transform: translate(0, 1vh) rotate(-2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(2deg);
+  }
+}
+
+@keyframes tilting {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}

@@ -10,9 +10,10 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
 
     '''
-    $ export FLASK_APP=flask_App.py
-    $ flask run
+    export FLASK_APP=flask_App.py
+    flask run
     or just run thur idle if it doesn't work
     https://python-adv-web-apps.readthedocs.io/en/latest/flask3.html = for css and js folder structure
+    https://codepen.io/huange/pen/rbqsD where i got the search bar code from
     '''
     

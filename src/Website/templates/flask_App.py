@@ -14,5 +14,6 @@ if __name__ == "__main__":
     $ export FLASK_APP=flask_App.py
     $ flask run
     or just run thur idle if it doesn't work
+    https://python-adv-web-apps.readthedocs.io/en/latest/flask3.html = for css and js folder structure
     '''
     

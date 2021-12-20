@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-weight: 900;
+  font-weight: 800;
   font-size: 75px;
 
   color: #fae8e0;
@@ -25,7 +25,7 @@ body {
 }
 
 .title span {
-  transition: font-weight 0.5s ease-in;
+  transition: font-weight 0.3s ease-in;
   animation: floating-secondary 2.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
 }
 

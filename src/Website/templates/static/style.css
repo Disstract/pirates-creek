@@ -63,15 +63,12 @@ body {
 .title span:nth-child(11) {
   animation-delay: 11s;
 }
+.title span:nth-child(12) {
   animation-delay: 12s;
 }
 .title span:nth-child(13) {
   animation-delay: 13s;
 }
-
-
-
-
 
 .title span:hover {
   font-weight: 100;

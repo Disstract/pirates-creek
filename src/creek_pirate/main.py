@@ -7,33 +7,34 @@ from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter
 search = str(input("Enter Search: "))
 
 crackhubResults = crackhub_Filter.crackhubSearch(search)
-print(" ")
-print(crackhubResults)
+# print(" ")
+# print(crackhubResults)
 
 
 crackhubSceneResults = crackhubScene_Filter.crackhubSceneSearch(search)
-print(" ")
-print(crackhubSceneResults)
+# print(" ")
+# print(crackhubSceneResults)
 
 gloadResults = gloadFilter.gloadSearch(search)
-print(" ")
-print(gloadResults)
+# print(" ")
+# print(gloadResults)
 
 gogGamesResults = gogGamesFilter.gogGamesSearch(search)
-print(" ")
-print(gogGamesResults)
+# print(" ")
+# print(gogGamesResults)
 
 ovaGamesResults = ovagamesFilter.ovaGamesSearch(search)
-print(" ")
-print(ovaGamesResults)
+# print(" ")
+# print(ovaGamesResults)
 
 chovkaRepackResults = chovkaRepackFilter.chovkaSearch(search)
-print(" ")
-print(chovkaRepackResults)
+# print(" ")
+# print(chovkaRepackResults)
 
 fitgirlRepackResults = fitgirlRepackFilter.fitgirlSearch(search)
-print(" ")
-print(fitgirlRepackResults)
+# print(" ")
+# print(fitgirlRepackResults)
 
 
-
+result_full = \n + crackhubResults + \n + crackhubSceneResults + \n + gloadResults + \n + gogGamesResults + \n + ovaGamesResults + \n + chovkaRepackResults + \n + fitgirlRepackResults
+print(result_full)

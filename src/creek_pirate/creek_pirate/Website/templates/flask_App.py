@@ -1,11 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__, template_folder='template')
 
 @app.route('/')
 def main():
     return render_template("website.html")
 
+@app.route('/result')
 def result():
+    result = request.form.to_dict()
+
+
     return render_template("searchres.html")
 
 if __name__ == "__main__":

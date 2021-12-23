@@ -1,0 +1,142 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+	font-family: "Inter var", sans-serif;
+}
+
+body {
+	margin: 0;
+	background: #13131a;
+	overflow: hidden;
+	padding: 30px;
+}
+
+.title {
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+
+	font-weight: 800;
+	font-size: 75px;
+
+	color: #fae8e0;
+
+	animation: tilting 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.title span {
+	transition: font-weight 0.3s ease-in;
+	animation: floating-secondary 2.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+
+.title span:nth-child(1) { animation-delay: 1s; }
+.title span:nth-child(2) { animation-delay: 2s; }
+.title span:nth-child(3) { animation-delay: 3s; }
+.title span:nth-child(4) { animation-delay: 4s; }
+.title span:nth-child(5) { animation-delay: 5s; }
+.title span:nth-child(6) { animation-delay: 6s; }
+.title span:nth-child(7) { animation-delay: 7s; }
+.title span:nth-child(8) { animation-delay: 6s; }
+.title span:nth-child(9) { animation-delay: 5s; }
+.title span:nth-child(10) { animation-delay: 4s; }
+.title span:nth-child(11) { animation-delay: 3s; }
+.title span:nth-child(12) { animation-delay: 2s; }
+.title span:nth-child(13) { animation-delay: 1s; }
+
+.spacer { width: 20px; }
+
+.title span:hover { font-weight: 100; }
+
+
+
+.footer {
+	position: fixed;
+	font-size: 4px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #4f517d;
+	color: #dccfec;
+	text-align: center;
+}
+
+.wrap {
+	display: grid;
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.search {
+	width: 100%;
+	position: relative;
+	display: flex;
+}
+
+.searchTerm {
+	grid-column: 1;
+	width: 100%;
+	border: 3px solid #fae8e0;
+	border-right: none;
+	padding: 5px;
+	height: 20px;
+	border-radius: 10px 0 0 10px;
+	outline: none;
+	color: #787480;
+}
+
+.searchTerm:focus {
+	color: #4f517d;
+}
+
+.searchButton {
+	grid-column: 2;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
+	color: #0fa713;
+}
+
+@keyframes floating {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(0, 5vh);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes floating-secondary {
+	0% {
+		transform: translate(0, 0) rotate(2deg);
+	}
+	50% {
+		transform: translate(0, 1vh) rotate(-2deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(2deg);
+	}
+}
+
+@keyframes tilting {
+	0% {
+		transform: rotate(1deg);
+	}
+	50% {
+		transform: rotate(-1deg);
+	}
+	100% {
+		transform: rotate(1deg);
+	}
+}

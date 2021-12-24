@@ -8,9 +8,11 @@ def crackhubSceneSearch(search):
         session = HTMLSession()
         r = session.get("https://scene.crackhub.site/?s="+search)
 
-        titles = r.html.find('.entry-title')
+        titles = r.html.find('.entry-title a')
+        print(titles)
         try:
             link = r.html.find('.entry-title a')
+            print("\nLink:", link)
         except:
             pass
 
@@ -24,3 +26,5 @@ def crackhubSceneSearch(search):
     except:
         return("Crackhub Scene: Connection Failed!")
 
+search = input("enter: ")
+print(crackhubSceneSearch(search))

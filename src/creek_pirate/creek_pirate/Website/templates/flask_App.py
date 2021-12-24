@@ -1,7 +1,17 @@
 from flask import Flask, render_template, request
+import jinja2
+
+from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter
+from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter
+
+env = jinja2.Environment()
+env.globals.update(zip=zip)
+
 app = Flask(__name__, template_folder='template')
 
+
 array = ["eeee", "bbbb", "aaaa", "cccc"]
+array = zip(array[::2], array[1::2])
 
 @app.route('/')
 def main():
@@ -11,9 +21,11 @@ def main():
 def result():
     result = request.form.to_dict()
     result = result["search"]
+    result = chovkaRepackFilter.chovkaSearch(result)
+    result = zip(result[::2], result[1::2]) 
 
 
-    return render_template("website.html", result = array) 
+    return render_template("website.html", result = result) 
 
 if __name__ == "__main__":
     app.run(debug=True)

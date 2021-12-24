@@ -34,12 +34,12 @@
 		</center>
 
 		<div class="output">
-			{% for i, b in result.items()%}
-			<span>{{i}}</span>
-			<span>{{b}}</span>
-
-			
-			{% endfor %}
+			{% if result %}
+				{% for name, link in result %} 
+					<a href={{link}}>{{name}}</a>	
+					<br>	
+				{% endfor %}
+			{% endif %}
 		</div>
 
 

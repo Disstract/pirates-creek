@@ -28,4 +28,5 @@ def crackhubSearch(search):
     except:
         return("Crackhub: Connection Failed!")
 
-
+#search = input("Enter: ")
+#print(crackhubSearch(search))

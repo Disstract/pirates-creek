@@ -7,8 +7,8 @@ from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter
 search = str(input("Enter Search: "))
 
 crackhubResults = crackhub_Filter.crackhubSearch(search)
-# print(" ")
-# print(crackhubResults)
+print(" ")
+print(crackhubResults)
 
 
 crackhubSceneResults = crackhubScene_Filter.crackhubSceneSearch(search)
@@ -36,5 +36,5 @@ fitgirlRepackResults = fitgirlRepackFilter.fitgirlSearch(search)
 # print(fitgirlRepackResults)
 
 
-result_full = \n + crackhubResults + \n + crackhubSceneResults + \n + gloadResults + \n + gogGamesResults + \n + ovaGamesResults + \n + chovkaRepackResults + \n + fitgirlRepackResults
-print(result_full)
+#result_full = \n + crackhubResults + \n + crackhubSceneResults + \n + gloadResults + \n + gogGamesResults + \n + ovaGamesResults + \n + chovkaRepackResults + \n + fitgirlRepackResults
+#print(result_full)

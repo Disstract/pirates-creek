@@ -1,16 +1,19 @@
 from flask import Flask, render_template, request
 app = Flask(__name__, template_folder='template')
 
+array = ["eeee", "bbbb", "aaaa", "cccc"]
+
 @app.route('/')
 def main():
     return render_template("website.html")
 
-@app.route('/result')
+@app.route('/result', methods = ["POST","GET"])
 def result():
     result = request.form.to_dict()
+    result = result["search"]
 
 
-    return render_template("searchres.html")
+    return render_template("website.html", result = array) 
 
 if __name__ == "__main__":
     app.run(debug=True)

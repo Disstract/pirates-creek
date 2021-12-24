@@ -2,6 +2,7 @@ from requests.sessions import session
 from requests_html import HTMLSession
 import time
 
+# Search
 def crackhubSearch(search):
     results = []
     try:

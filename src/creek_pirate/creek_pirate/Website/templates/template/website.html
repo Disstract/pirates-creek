@@ -25,12 +25,26 @@
 			<span>E</span>
 			<span>K</span>
 		</div>
+
 		<center class="searchWrap">
 			<form class="searchCover" action = "/result" method = "POST">
 				<input type="text" name="search" class="searchTerm" placeholder="What are you looking for?">	
 				<input type="Submit" class = "searchButton" value="">
 			</form>
 		</center>
+
+		<div class="output">
+			{% for i, b in result.items()%}
+			<span>{{i}}</span>
+			<span>{{b}}</span>
+
+			
+			{% endfor %}
+		</div>
+
+
+
+
 
 
 		<div class="footer">

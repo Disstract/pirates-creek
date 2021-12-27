@@ -6,7 +6,7 @@ import time
 def crackhubSearch(search):
     results = []
     try:
-         
+
         session = HTMLSession()
         r = session.get("https://crackhub.site/?s="+search)
 

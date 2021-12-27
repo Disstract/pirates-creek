@@ -17,7 +17,7 @@ def gloadSearch(search):
                 except:
                     pass
         return(results)
-        
+
     except:
         return("Gload: Connection Failed!")
-    
+

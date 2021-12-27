@@ -26,5 +26,5 @@ def crackhubSceneSearch(search):
     except:
         return("Crackhub Scene: Connection Failed!")
 
-search = input("enter: ")
-print(crackhubSceneSearch(search))
+#search = input("enter: ")
+#print(crackhubSceneSearch(search))

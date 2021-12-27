@@ -9,20 +9,17 @@ def crackhubSceneSearch(search):
         r = session.get("https://scene.crackhub.site/?s="+search)
 
         titles = r.html.find('.entry-title a')
-        print(titles)
-        try:
-            link = r.html.find('.entry-title a')
-            print("\nLink:", link)
-        except:
-            pass
 
-        for i in range(0, len(titles)):
-            results.append(titles[i].text)
-            try:
-                results.append(link[i].attrs['href'])
-            except:
-                pass
-            return(results)
+        for i in titles:
+            print(i)
+
+       # for i in range(0, len(titles)):
+        #    results.append(titles[i].text)
+       #     try:
+     #           results.append(titles[i].attrs['href'])
+  #          except:
+#                pass
+ #           return(results)
     except:
         return("Crackhub Scene: Connection Failed!")
 

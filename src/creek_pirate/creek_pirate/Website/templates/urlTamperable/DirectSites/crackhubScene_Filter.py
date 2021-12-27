@@ -13,13 +13,13 @@ def crackhubSceneSearch(search):
         for i in titles:
             print(i)
 
-       # for i in range(0, len(titles)):
-        #    results.append(titles[i].text)
-       #     try:
-     #           results.append(titles[i].attrs['href'])
-  #          except:
-#                pass
- #           return(results)
+        for i in range(0, len(titles)):
+            results.append(titles[i].text)
+            try:
+                results.append(titles[i].attrs['href'])
+            except:
+                pass
+            return(results)
     except:
         return("Crackhub Scene: Connection Failed!")
 

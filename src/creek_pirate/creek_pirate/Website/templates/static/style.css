@@ -92,7 +92,14 @@ body {
 
 }
 
-
+div.multiple_select_checkbox {
+    width: 150px;
+    height: 60px;
+    overflow-x: hidden;
+    color: #dccfec;
+    overflow-y: auto;
+    border: 1px solid #CCCCCC;
+}
 
 @keyframes floating {
 	0% {

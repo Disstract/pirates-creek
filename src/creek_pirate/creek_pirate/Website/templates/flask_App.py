@@ -36,5 +36,7 @@ flask run
 or just run thur idle if it doesn't work
 https://python-adv-web-apps.readthedocs.io/en/latest/flask3.html = for css and js folder structure
 
+
+https://www.knowledgewalls.com/johnpeter/books/good-javascript-examples/how-to-create-multiselect-combobox-with-checkbox-in-javascript-and-html-with-example
 '''
     

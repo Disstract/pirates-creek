@@ -35,33 +35,32 @@
 
 		<div class="output">
 			{% if result %}
-				{% for name, link in result %} 
-					<a href={{link}}>{{name}}</a>	
-					<br>	
-				{% endfor %}
+			{% for name, link in result %} 
+			<a href={{link}}>{{name}}</a>	
+			<br>	
+			{% endfor %}
 			{% endif %}
 		</div>
 		<div style="color: #dccfec">
-            <h2>SITE TOGGLER</h2> 
-        </div>
-    <div style="color: #dccfec">
-        <div class="multiple_select_checkbox">
-            <div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1001" />crackhub</div>
-            <div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1002" />gload</div>
-            <div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1003" />gog</div>
-            <div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1004" />ova</div>
-            <div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1004" />chovka</div>
-</div>
+			<h2>SITE TOGGLER</h2> 
+		</div>
+		<div style="color: #dccfec">
+			<div class="multiple_select_checkbox">
+				<div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1001" />crackhub</div>
+				<div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1002" />gload</div>
+				<div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1003" />gog</div>
+				<div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1004" />ova</div>
+				<div id="multiple_select_checkbox_choice"><input type="checkbox" name="slt_username" value="1004" />chovka</div>
+			</div>
+		</div>
 
-    </div>
-    <button onclick="javascript:validate();">Next</button>
+		<button onclick="javascript:validate();">Next</button>
 
 
 		<div class="footer">
 			<span>Contact Us</span>
 			<p>""discord server link here ""[Discord]</p>
 			<p>u/ramjithunder24 or u/Riffle_X [Reddit DMs]</p>
-
 		</div>
 
 		<script src="index.js"></script>

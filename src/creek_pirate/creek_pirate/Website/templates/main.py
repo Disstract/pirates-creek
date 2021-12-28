@@ -20,9 +20,9 @@ gogGamesResults = gogGamesFilter.gogGamesSearch(search)
 print(" ")
 print(gogGamesResults)
 
-ovaGamesResults = ovagamesFilter.ovaGamesSearch(search)
-print(" ")
-print(ovaGamesResults)
+#ovaGamesResults = ovagamesFilter.ovaGamesSearch(search)
+#print(" ")
+#print(ovaGamesResults)
 
 chovkaRepackResults = chovkaRepackFilter.chovkaSearch(search)
 print(" ")
@@ -32,5 +32,5 @@ fitgirlRepackResults = fitgirlRepackFilter.fitgirlSearch(search)
 print(" ")
 print(fitgirlRepackResults)
 
-
+#https://gamesdrive.net/search.php?action=do_search&keywords=enter&postthread=1&author=&matchusername=1&forums%5B%5D=all&forums%5B%5D=all&findthreadst=1&numreplies=&postdate=0&pddir=1&sortby=lastpost&sortordr=desc&showresults=threads&submit=Search
 

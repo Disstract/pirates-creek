@@ -61,58 +61,17 @@ body {
 	align-items: center;
 }
 
-
-.wrapper{
-	padding: 10px;
-}
-			
+		
 div.siteToggle {
     
 	font-size: 4px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.searchCover{
-	display: grid;
-	padding-top: 200px;
-	width: fit-content;	
-
-}
-.searchTerm{
-	height: 35px;
-	width: 350px;
-
-	grid-column: 1;
-	height: 35px;
-
-	padding-left: 10px;
-
-	border: none;
-	border-radius: 15px 0px 0px 15px;
-}
-
-
-.searchButton{
-	grid-column: 2;
-	border: none;
-
-	border-radius: 0px 15px 15px 0px;
-	width: 35px;
-
 }
 
 div.multiple_select_checkbox {
     width: 150px;
     height: 60px;
-    overflow-x: hidden;
     color: #dccfec;
-    
-	justify-content: center;
-	align-items: center;
-    overflow-y: auto;
-    border: 1px solid #CCCCCC;
+
 }
 
 @keyframes floating {

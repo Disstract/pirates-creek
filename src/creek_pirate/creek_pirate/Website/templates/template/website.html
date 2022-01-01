@@ -35,12 +35,33 @@
 
 		<div class="output">
 			{% if result %}
-			{% for name, link in result %} 
-			<a href={{link}}>{{name}}</a>	
-			<br>	
+
+			<h1 class = "output"> Crackhub </h1>
+			{% for name, link in crackhub %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
 			{% endfor %}
-			{% endif %}
+
+			<h1 class = "output"> Gload </h1>
+			{% for name, link in gload %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
 			
+			<h1 class = "output"> Gog Games </h1>
+			{% for name, link in gogGames %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
+	
+			<h1 class = "output"> Chovka </h1>
+			{% for name, link in chovka %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
+
+			{% endif %}
+
 
 
 

@@ -10,7 +10,7 @@ body {
 	padding: 30px;
 }
 
-.title {	
+.title {
 	display: flex;
 	
 	justify-content: center;
@@ -90,15 +90,6 @@ body {
 	border-radius: 0px 15px 15px 0px;
 	width: 35px;
 
-}
-
-div.multiple_select_checkbox {
-    width: 150px;
-    height: 60px;
-    overflow-x: hidden;
-    color: #dccfec;
-    overflow-y: auto;
-    border: 1px solid #CCCCCC;
 }
 
 @keyframes floating {

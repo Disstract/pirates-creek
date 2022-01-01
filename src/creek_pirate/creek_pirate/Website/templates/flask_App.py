@@ -32,7 +32,7 @@ def result():
     chovka = zip(chovka[::2], chovka[1::2]) 
 
 
-    return render_template("website.html", crackhub = crackhub, gload = gload, gogGames = gogGames, chovka = chovka)
+    return render_template("website.html", result = result, crackhub = crackhub, gload = gload, gogGames = gogGames, chovka = chovka)
 
 @app.route('/settings', methods = ["POST","GET"])
 def settings():

@@ -49,20 +49,6 @@ body {
 .title span:hover { font-weight: 100; }
 
 
-
-.footer {
-	position: fixed;
-	font-size: 4px;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: #4f517d;
-	color: #dccfec;
-	text-align: center;
-}
-
-
-
 .searchCover{
 	display: grid;
 	padding-top: 200px;

@@ -17,11 +17,28 @@ def main():
 def result():
     result = request.form.to_dict()
     result = result["search"]
-    result = chovkaRepackFilter.chovkaSearch(result)
-    result = zip(result[::2], result[1::2]) 
+    
+    crackhub = crackhub_Filter.crackhubSearch(result)
+    crackhub = zip(crackhub[::2], crackhub[1::2]) 
+
+    gload = gloadFilter.gloadSearch(result)
+    gload = zip(gload[::2], gload[1::2])
+
+    gogGames = gogGamesFilter.gogGamesSearch(result)
+    gogGames = zip(gogGames[::2], gogGames[1::2])
 
 
-    return render_template("website.html", result = result)
+    chovka = chovkaRepackFilter.chovkaSearch(result)
+    chovka = zip(chovka[::2], chovka[1::2]) 
+
+
+    return render_template("website.html", crackhub = crackhub, gload = gload, gogGames = gogGames, chovka = chovka)
+
+@app.route('/settings', methods = ["POST","GET"])
+def settings():
+    return render_template("settings.html")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

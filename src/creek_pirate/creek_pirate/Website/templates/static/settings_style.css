@@ -58,9 +58,16 @@ body {
 	width: 100%;
 	background-color: #4f517d;
 	color: #dccfec;
-	text-align: center;
+	align-items: center;
 }
 
+
+div.siteToggle {
+    
+	font-size: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 .searchCover{
@@ -97,6 +104,9 @@ div.multiple_select_checkbox {
     height: 60px;
     overflow-x: hidden;
     color: #dccfec;
+    
+	justify-content: center;
+	align-items: center;
     overflow-y: auto;
     border: 1px solid #CCCCCC;
 }

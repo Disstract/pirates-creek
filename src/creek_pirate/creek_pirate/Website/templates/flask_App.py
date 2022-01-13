@@ -34,15 +34,10 @@ def result():
 
     return render_template("website.html", result = result, crackhub = crackhub, gload = gload, gogGames = gogGames, chovka = chovka)
 
-@app.route('/settings', methods = ["POST","GET"])
-def settings():
-    return render_template("settings.html")
-
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=3900, debug=True)
 
 
 

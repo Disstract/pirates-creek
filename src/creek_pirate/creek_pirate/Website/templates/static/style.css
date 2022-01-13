@@ -5,7 +5,7 @@ html {
 
 body {
 	margin: 0;
-	background: #13131a;
+	background: #f4eded;
 	overflow: hidden;
 	padding: 30px;
 }
@@ -19,7 +19,7 @@ body {
 	font-weight: 800;
 	font-size: 75px;
 
-	color: #fae8e0;
+	color: #000000;
 
 	animation: tilting 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
 }

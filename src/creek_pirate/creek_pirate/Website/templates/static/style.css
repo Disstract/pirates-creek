@@ -8,6 +8,12 @@ body {
 	background: #13131a;
 	overflow: hidden;
 	padding: 30px;
+	width: auto; 
+	height: auto; 
+	line-height: 3em; 
+	overflow:scroll; 
+	border: thin #000 solid; 
+	padding: 5px;"
 }
 
 .title {

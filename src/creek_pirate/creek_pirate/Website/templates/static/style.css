@@ -3,6 +3,7 @@ html {
 	font-family: "Inter var", sans-serif;
 }
 
+
 body {
 	margin: 0;
 	background: #13131a;
@@ -11,9 +12,10 @@ body {
 	width: auto; 
 	height: auto; 
 	line-height: 3em; 
-	overflow:scroll; 
+	overflow:scroll;
+	padding-left: 50px;
 	border: thin #000 solid; 
-	padding: 5px;"
+	padding: 5px;
 }
 
 .title {
@@ -35,6 +37,8 @@ body {
 .footer {
 	color: #fae8e0;
 	text-align: center;
+	padding-bottom: 20px;
+
 }
 
 .title span {
@@ -42,6 +46,13 @@ body {
 	animation: floating-secondary 2.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
 }
 
+.output {
+	color: #fae8e0;
+}
+
+.outputs {
+	padding-left: 250px;
+}
 
 .title span:nth-child(1) { animation-delay: 1s; }
 .title span:nth-child(2) { animation-delay: 2s; }

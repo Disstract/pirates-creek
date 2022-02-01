@@ -17,6 +17,8 @@ body {
 }
 
 .title {
+	padding: 30px;
+
 	display: flex;
 	
 	justify-content: center;
@@ -32,6 +34,7 @@ body {
 
 .footer {
 	color: #fae8e0;
+	text-align: center;
 }
 
 .title span {

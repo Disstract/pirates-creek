@@ -13,7 +13,8 @@ def onlineFixSearch(search):
         return(titles.text)
 
     except:
-        return("Crackhub: Connection Failed!")
+        results = ["Crackhub Scene: Connection Failed!"]
+        return(results)
 
 
 

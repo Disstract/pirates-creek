@@ -9,11 +9,14 @@ def crackhubSceneSearch(search):
         r = session.get("https://scene.crackhub.site/?s="+search)
 
         titles = r.html.find('.entry-title a')
+        time.sleep(0.05)
 
     
 
         for i in range(0, len(titles)):
             results.append(titles[i].text)
+            time.sleep(0.05)
+
             try:
                 results.append(link[i].attrs['href'])
             except:
@@ -22,4 +25,5 @@ def crackhubSceneSearch(search):
             results.append("Nothing Found")
         return(results)
     except:
-        return("Crackhub Scene: Connection Failed!")
+        results = ["Crackhub Scene: Connection Failed!"]
+        return(results)

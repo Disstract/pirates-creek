@@ -9,7 +9,8 @@ def gloadSearch(search):
         r = session.get("https://gload.to/?s="+search)
 
         titles = r.html.find('.postsborder a')
-        
+        time.sleep(0.05)
+
         
         if titles == []:
             results.append("Nothing Found")

@@ -8,6 +8,8 @@ def gnarlySearch(search):
         r = session.get("https://www.gnarly-repacks.site/?s="+search)
 
         link = r.html.find('.loop-entry-title a')
+        time.sleep(0.05)
+
         if link == []:
             results.append("Nothing Found")
         else:
@@ -16,8 +18,10 @@ def gnarlySearch(search):
                     results.append(link[i].attrs['href'])
                 except:
                     pass
+
         return(results)
 
     except:
-        return("Gnarly: Connection Failed!")
+        results = ["Gnarly Repacks: Connection Failed!"]
+        return(results)
 

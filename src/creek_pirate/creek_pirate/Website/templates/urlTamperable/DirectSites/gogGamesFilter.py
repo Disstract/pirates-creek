@@ -21,4 +21,5 @@ def gogGamesSearch(search):
                 time.sleep(0.05)
         return(results)
     except:
-        return("GOG Games: Connection Failed!")
+        results = ["Crackhub Scene: Connection Failed!"]
+        return(results)

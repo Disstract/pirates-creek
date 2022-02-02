@@ -3,21 +3,24 @@ import time
 
 def gloadSearch(search):
     results = []
+    
     try:
         session = HTMLSession()
         r = session.get("https://gload.to/?s="+search)
 
-        link = r.html.find('.postsborder a')
-        if link == []:
+        titles = r.html.find('.postsborder a')
+        
+        
+        if titles == []:
             results.append("Nothing Found")
         else:
-            for i in range(0, len(link)):
-                try:
-                    results.append(link[i].attrs['href'])
-                except:
-                    pass
+            for i in range(0, len(titles)):
+                
+                results.append(titles[i].text)
+                results.append(titles[i].attrs['href'])
+                
         return(results)
-
+        
     except:
         return("Gload: Connection Failed!")
 

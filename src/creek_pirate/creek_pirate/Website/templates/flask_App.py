@@ -21,6 +21,9 @@ def result():
     crackhub = crackhub_Filter.crackhubSearch(result)
     crackhub = zip(crackhub[::2], crackhub[1::2]) 
 
+    crackhubscene = crackhubScene_Filter.crackhubSceneSearch(result)
+    crackhubscene = zip(crackhubscene[::2], crackhubscene[1::2])
+    
     gload = gloadFilter.gloadSearch(result)
     gload = zip(gload[::2], gload[1::2])
     
@@ -38,8 +41,9 @@ def result():
     chovka = chovkaRepackFilter.chovkaSearch(result)
     chovka = zip(chovka[::2], chovka[1::2]) 
 
-
-    return render_template("website.html", result = result, crackhub = crackhub, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka)
+   
+        
+    return render_template("website.html", result = result, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka)
 
 
 

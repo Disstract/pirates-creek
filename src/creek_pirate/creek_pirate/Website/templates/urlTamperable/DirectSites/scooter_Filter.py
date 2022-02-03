@@ -9,8 +9,6 @@ def scooterSearch(search):
         r = session.get("https://scooter-repacks.site/?s="+search)
 
         titles = r.html.find('.entry-title a')
-        time.sleep(0.05)
-
         
         if titles == []:
             results.append("Nothing Found")
@@ -25,5 +23,3 @@ def scooterSearch(search):
        
     except:
         return("Scooter: Connection Failed!")
-
-

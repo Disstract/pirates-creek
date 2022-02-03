@@ -6,8 +6,8 @@ from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter, gnarl
 app = Flask(__name__, template_folder='template')
 
 
-array = ["eeee", "bbbb", "aaaa", "cccc"]
-array = zip(array[::2], array[1::2])
+# array = ["eeee", "bbbb", "aaaa", "cccc"]
+# array = zip(array[::2], array[1::2])
 
 @app.route('/')
 def main():
@@ -30,7 +30,6 @@ def result():
     gnarly = gnarlyFilter.gnarlySearch(result)
     gnarly = zip(gnarly[::2], gnarly[1::2])
 
-    
     scooter = scooter_Filter.scooterSearch(result)
     scooter = zip(scooter[::2], scooter[1::2])
 

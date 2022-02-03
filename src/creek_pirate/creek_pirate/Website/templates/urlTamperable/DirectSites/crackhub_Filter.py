@@ -13,12 +13,8 @@ def crackhubSearch(search):
         titles = r.html.find('.entry-title')
         time.sleep(0.05)
 
-        try:
-            link = r.html.find('.entry-title a')
-            time.sleep(0.05)
-
-        except:
-            pass
+        link = r.html.find('.entry-title a')
+        time.sleep(0.05)
 
         for i in range(0, len(titles)):
             results.append(titles[i].text)

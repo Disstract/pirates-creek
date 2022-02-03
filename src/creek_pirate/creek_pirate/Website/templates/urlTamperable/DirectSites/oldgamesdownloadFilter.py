@@ -21,5 +21,3 @@ def oldgamesdownloadSearch(search):
     except:
         results = ["Old Games Download: Connection Failed!"]
         return(results)
-enter = input(":")
-print(oldgamesdownloadSearch(enter))

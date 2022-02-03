@@ -47,7 +47,11 @@
 			<a href={{link}}>{{name}}</a>
 			<br>
 			{% endfor %}
-
+			<h1 class = "output"> My Abandonware </h1>
+			{% for name, link in myabandonware %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
 
 			<h1 class = "output"> Gload </h1>
 			{% for name, link in gload %}	

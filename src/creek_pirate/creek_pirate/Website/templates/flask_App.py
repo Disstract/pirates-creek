@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter, scooter_Filter, myabandonwareFilter
+from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter, scooter_Filter, myabandonwareFilter, oldgamesdownloadFilter
 from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter, gnarlyFilter
 
 app = Flask(__name__, template_folder='template')
@@ -17,6 +17,9 @@ def main():
 def result():
     result = request.form.to_dict()
     result = result["search"]
+
+    oldgamesdownload = oldgamesdownloadFilter.oldgamesSearch(result)
+    oldgamesdownload = zip(oldgamesdownload[::2], oldgamesdownload[1::2])
     
     myabandonware = myabandonwareFilter.myabandonwareSearch(result)
     myabandonware = zip(myabandonware[::2], myabandonware[1::2])
@@ -48,7 +51,7 @@ def result():
 
    
         
-    return render_template("website.html", result = result, ova=ova, myabandonware = myabandonware, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka)
+    return render_template("website.html", result = result, ova=ova, oldgamesdownload = oldgamesdownload, myabandonware = myabandonware, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka)
 
 
 

@@ -1,14 +1,14 @@
+from requests.sessions import session
 from requests_html import HTMLSession
-import time
 
-def gloadSearch(search):
+def scooterSearch(search):
     results = []
     
     try:
         session = HTMLSession()
-        r = session.get("https://gload.to/?s="+search)
+        r = session.get("https://scooter-repacks.site/?s="+search)
 
-        titles = r.html.find('.postsborder a')
+        titles = r.html.find('.entry-title a')
         time.sleep(0.05)
 
         
@@ -22,6 +22,8 @@ def gloadSearch(search):
                 
         return(results)
         
+       
     except:
-        return("Gload: Connection Failed!")
+        return("Scooter: Connection Failed!")
+
 

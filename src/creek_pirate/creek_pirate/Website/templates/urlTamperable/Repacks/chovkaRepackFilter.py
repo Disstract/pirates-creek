@@ -9,6 +9,7 @@ def chovkaSearch(search):
 
         titles = r.html.find('.title')
         link = r.html.find('.text-dark')
+        time.sleep(0.05)
 
         for i in range(0, len(titles)):
             results.append(titles[i].text)
@@ -18,6 +19,8 @@ def chovkaSearch(search):
                 pass
         if results == []:
             results.append("Nothing Found")
+        
         return(results)
     except:
-        return("Chovka Repacks: Connection Failed!")
+        results = ["Chovka Repacks: Connection Failed!"]
+        return(results)

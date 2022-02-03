@@ -9,7 +9,7 @@
 	</head>
 
 	<body>
-    <div style = " width: 1820px; height: 720px; line-height: 3em; overflow:scroll; border: thin #000 solid; padding: 5px;">
+    <div class="title">
 			<span>P</span>
 			<span>I</span>
 			<span>R</span>
@@ -33,7 +33,7 @@
 			</form>
 		</center>
 
-		<div class="output">
+		<div class="outputs">
 			{% if result %}
 
 			<h1 class = "output"> Crackhub </h1>
@@ -41,9 +41,28 @@
 			<a href={{link}}>{{name}}</a>
 			<br>
 			{% endfor %}
+			
+			<h1 class = "output"> Crackhub Scene</h1>
+			{% for name, link in crackhubscene %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
+
 
 			<h1 class = "output"> Gload </h1>
 			{% for name, link in gload %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
+			
+			<h1 class = "output"> Scooter </h1>
+			{% for name, link in scooter %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
+			
+			<h1 class = "output"> Gnarly </h1>
+			{% for name, link in gnarly %}	
 			<a href={{link}}>{{name}}</a>
 			<br>
 			{% endfor %}
@@ -66,8 +85,12 @@
 
 		</div>
 		<div class="footer">
-			<span>Contact Us</span>
-			<p>u/Riffle_X [Reddit DMs]</p>
+			<h2>Contact Us</h2>
+			<div class="spacer"> </div>
+			<a href="https://www.reddit.com/user/Riffle_X">u/Riffle_X [Reddit DMs]</a>
+			<div class="spacer"> </div>
+			<a href="mailto:mystery.in.hoodie@ctemplar.com">mystery.in.hoodie [Email]</a>
+
 		</div>
     
     	<script src="index.js"></script>

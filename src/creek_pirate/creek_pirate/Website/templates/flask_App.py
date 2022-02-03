@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 
-from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter
-from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter
+from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter, scooter_Filter
+from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter, gnarlyFilter
 
 app = Flask(__name__, template_folder='template')
 
@@ -21,8 +21,18 @@ def result():
     crackhub = crackhub_Filter.crackhubSearch(result)
     crackhub = zip(crackhub[::2], crackhub[1::2]) 
 
+    crackhubscene = crackhubScene_Filter.crackhubSceneSearch(result)
+    crackhubscene = zip(crackhubscene[::2], crackhubscene[1::2])
+    
     gload = gloadFilter.gloadSearch(result)
     gload = zip(gload[::2], gload[1::2])
+    
+    gnarly = gnarlyFilter.gnarlySearch(result)
+    gnarly = zip(gnarly[::2], gnarly[1::2])
+
+    
+    scooter = scooter_Filter.scooterSearch(result)
+    scooter = zip(scooter[::2], scooter[1::2])
 
     gogGames = gogGamesFilter.gogGamesSearch(result)
     gogGames = zip(gogGames[::2], gogGames[1::2])
@@ -31,13 +41,14 @@ def result():
     chovka = chovkaRepackFilter.chovkaSearch(result)
     chovka = zip(chovka[::2], chovka[1::2]) 
 
-
-    return render_template("website.html", result = result, crackhub = crackhub, gload = gload, gogGames = gogGames, chovka = chovka)
+   
+        
+    return render_template("website.html", result = result, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka)
 
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=3900, debug=True)
+    app.run(host='0.0.0.0', port=3912, debug=True)
 
 
 

@@ -11,8 +11,12 @@ def crackhubSearch(search):
         r = session.get("https://crackhub.site/?s="+search)
 
         titles = r.html.find('.entry-title')
+        time.sleep(0.05)
+
         try:
             link = r.html.find('.entry-title a')
+            time.sleep(0.05)
+
         except:
             pass
 
@@ -26,7 +30,6 @@ def crackhubSearch(search):
             results.append("Nothing Found")
         return(results)
     except:
-        return("Crackhub: Connection Failed!")
+        results = ["Crackhub Scene: Connection Failed!"]
+        return(results)
 
-#search = input("Enter: ")
-#print(crackhubSearch(search))

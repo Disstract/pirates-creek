@@ -1,7 +1,7 @@
 #post-format-image post-format-wrapper 
 from requests_html import HTMLSession
 import time
-def oldgamesdownloadSearch(search):
+def oldgamesSearch(search):
     results = []
     try:
         session = HTMLSession()

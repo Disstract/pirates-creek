@@ -17,7 +17,7 @@ def myabandonwareSearch(search):
             for i in range(0, len(titles)):
                 
                 results.append(titles[i].text)
-                results.append("https://www.myabandonware.com/game"+link[i].attrs['href'])
+                results.append("https://www.myabandonware.com"+link[i].attrs['href'])
                 time.sleep(0.05)
         return(results)
     except:

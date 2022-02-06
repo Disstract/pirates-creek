@@ -7,18 +7,18 @@ def gnarlySearch(search):
         session = HTMLSession()
         r = session.get("https://www.gnarly-repacks.site/?s="+search)
 
-        link = r.html.find('.loop-entry-title a')
-        time.sleep(0.05)
+        titles = r.html.find('.loop-entry-title a')
+        for i in range (0, len(titles)):
+            try:
+                results.append(titles[i].text)
+                results.append(titles[i].attrs['href'])
+            except:
+                pass
 
-        if link == []:
+        if titles == []:
             results.append("Nothing Found")
-        else:
-            for i in range(0, len(link)):
-                try:
-                    results.append(link[i].attrs['href'])
-                except:
-                    pass
 
+        results = zip(results[::2], results[1::2])
         return(results)
 
     except:

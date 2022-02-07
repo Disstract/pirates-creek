@@ -18,7 +18,7 @@ def result():
     result = request.form.to_dict()
     result = result["search"]
 
-    # oldgamesdownloadFilter.oldgamesdownloadSearch(result)
+    oldgamesdownloadfilter = oldgamesdownloadFilter.oldgamesdownloadSearch(result)
     
     myabandonware = myabandonwareFilter.myabandonwareSearch(result)
     
@@ -42,7 +42,7 @@ def result():
 
    
         
-    return render_template("website.html", result = result, ova=ova, myabandonware = myabandonware, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka, macbed = macbed)
+    return render_template("website.html", result = result, ova=ova, oldgamesdownloadfilter = oldgamesdownloadfilter, myabandonware = myabandonware, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka, macbed = macbed)
 
 
 if __name__ == "__main__":

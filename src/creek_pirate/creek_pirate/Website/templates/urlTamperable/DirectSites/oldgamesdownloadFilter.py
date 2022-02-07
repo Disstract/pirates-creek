@@ -1,5 +1,5 @@
 from requests_html import HTMLSession
-def oldgamesSearch(search):
+def oldgamesdownloadSearch(search):
     
     results = []
     try:

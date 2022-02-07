@@ -36,17 +36,6 @@
 		<div class="outputs">
 			{% if result %}
 
-			<h1 class = "output"> Crackhub </h1>
-			{% for name, link in crackhub %}	
-			<a href={{link}}>{{name}}</a>
-			<br>
-			{% endfor %}
-			
-			<h1 class = "output"> Crackhub Scene</h1>
-			{% for name, link in crackhubscene %}	
-			<a href={{link}}>{{name}}</a>
-			<br>
-			{% endfor %}
 			<h1 class = "output"> My Abandonware </h1>
 			{% for name, link in myabandonware %}	
 			<a href={{link}}>{{name}}</a>
@@ -90,11 +79,22 @@
 			{% endfor %}
 			
 			<h1 class = "output"> Old Games Download </h1>
-			{% for name, link in oldgamesdownloadFilter %}	
+			{% for name, link in oldgamesdownloadfilter %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
+			<h1 class = "output"> Crackhub </h1>
+			{% for name, link in crackhub %}	
 			<a href={{link}}>{{name}}</a>
 			<br>
 			{% endfor %}
 			
+			<h1 class = "output"> Crackhub Scene</h1>
+			{% for name, link in crackhubscene %}	
+			<a href={{link}}>{{name}}</a>
+			<br>
+			{% endfor %}
+
 			{% endif %}
 
 

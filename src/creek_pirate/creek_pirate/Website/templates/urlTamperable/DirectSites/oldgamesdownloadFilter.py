@@ -7,7 +7,8 @@ def oldgamesdownloadSearch(search):
         r = session.get("https://oldgamesdownload.com/?s="+search)
 
         titles = r.html.find('.title a')
-        
+        link = r.html.find('.title a')
+
         for i in range (0, len(titles)):
             try:
                 results.append(titles[i].text)

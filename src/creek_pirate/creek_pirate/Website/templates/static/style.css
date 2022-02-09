@@ -90,6 +90,20 @@ body {
 
 .title span:hover { font-weight: 100; }
 
+.rom a:link { 
+	color: #fae8e0; 
+}
+.rom a:visited {
+	color: #fae8e0;
+}
+.rom a:hover {
+	color: #fae8e0;
+}
+.rom a:active {
+	color: #fae8e0;
+}  
+ 
+
 
 .searchCover{
 	display: grid;

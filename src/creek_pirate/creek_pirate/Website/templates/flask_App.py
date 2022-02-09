@@ -41,9 +41,11 @@ def result():
 
     macbed = macbed_Filter.macbedSearch(result)
 
-   
-        
-    return render_template("website.html", result = result, ova=ova, oldgamesdownloadfilter = oldgamesdownloadfilter, myabandonware = myabandonware, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka, macbed = macbed)
+    romlink = "#rom"
+
+    romtext = "Jump to ROMS/Retro games"
+            
+    return render_template("website.html", result = result, romlink = romlink, romtext = romtext, ova=ova, oldgamesdownloadfilter = oldgamesdownloadfilter, myabandonware = myabandonware, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka, macbed = macbed)
 
 
 if __name__ == "__main__":

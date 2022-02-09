@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Pirate's Creek</title>
+	</head>
+
+	<body>
+    <div class="title">
+			<span>P</span>
+			<span>I</span>
+			<span>R</span>
+			<span>A</span>
+			<span>T</span>
+			<span>E</span>
+			<span>'</span>
+			<span>S</span>
+			<div class="spacer"> </div>
+			<span>C</span>
+			<span>R</span>
+			<span>E</span>
+			<span>E</span>
+			<span>K</span>
+		</div>
+
+		<center class="searchWrap">
+			<form class="searchCover" action = "/result" method = "POST">
+				<input type="text" name="search" class="searchTerm" placeholder="What are you looking for?">	
+				<input type="Submit" class = "searchButton" value="">
+			</form>
+		</center>
+
+		<div class="outputs">
+			
+		
+			
+			{% if result %}
+			
+			<div class="rom">
+				<a href={{romlink}}>{{romtext}}</a>
+			</div>
+			
+				<h1 class = "output"> Gload </h1>
+				{% for name, link in gload %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+
+				<h1 class = "output"> Scooter </h1>
+				{% for name, link in scooter %}	
+				<a href={{link}}>{{name}}</a>
+				{% endfor %}
+
+				<h1 class = "output"> Gnarly </h1>
+				{% for name, link in gnarly %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+				
+				<h1 class = "output"> Chovka </h1>
+				{% for name, link in chovka %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+
+				<h1 class = "output"> Macbed </h1>
+				{% for name, link in macbed %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+				
+				<h1 class = "output"> Crackhub </h1>
+				{% for name, link in crackhub %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+				
+				<h1 class = "output"> Crackhub Scene</h1>
+				{% for name, link in crackhubscene %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+				
+				<div id="rom"></div>
+				<h1 class = "output"> Gog Games </h1>
+				{% for name, link in gogGames %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+				
+				<h1 class = "output"> Old Games Download </h1>
+				{% for name, link in oldgamesdownloadfilter %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+				
+				<h1 class = "output"> My Abandonware </h1>
+				{% for name, link in myabandonware %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+
+
+
+			{% endif %}
+		</div>
+		<div class="footer">
+			<h2>Contact Us</h2>
+			<div class="spacer"> </div>
+			<a href="https://www.reddit.com/user/Riffle_X">u/Riffle_X [Reddit DMs]</a>
+			<div class="spacer"> </div>
+			<a href="mailto:mystery.in.hoodie@ctemplar.com">mystery.in.hoodie [Email]</a>
+
+		</div>
+    
+    	<script src="index.js"></script>
+        </div>	
+	</body>
+</html>

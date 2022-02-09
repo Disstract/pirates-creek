@@ -36,23 +36,13 @@
 		<div class="outputs">
 			{% if result %}
 
-				<h1 class = "output"> My Abandonware </h1>
-				{% for name, link in myabandonware %}	
-				<a href={{link}}>{{name}}</a>
-				<br>
-				{% endfor %}
-
 				<h1 class = "output"> Gload </h1>
 				{% for name, link in gload %}	
 				<a href={{link}}>{{name}}</a>
 				<br>
 				{% endfor %}
 
-				<h1 class = "output"> Old Games Download </h1>
-				{% for name, link in oldgamesdownloadfilter %}	
-				<a href={{link}}>{{name}}</a>
-				<br>
-				{% endfor %}
+
 
 				<h1 class = "output"> Scooter </h1>
 				{% for name, link in scooter %}	
@@ -65,12 +55,6 @@
 				<br>
 				{% endfor %}
 				
-				<h1 class = "output"> Gog Games </h1>
-				{% for name, link in gogGames %}	
-				<a href={{link}}>{{name}}</a>
-				<br>
-				{% endfor %}
-		
 				<h1 class = "output"> Chovka </h1>
 				{% for name, link in chovka %}	
 				<a href={{link}}>{{name}}</a>
@@ -83,12 +67,24 @@
 				<br>
 				{% endfor %}
 				
+				<h1 class = "output"> Gog Games </h1>
+				{% for name, link in gogGames %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+				
 				<h1 class = "output"> Old Games Download </h1>
 				{% for name, link in oldgamesdownloadfilter %}	
 				<a href={{link}}>{{name}}</a>
 				<br>
 				{% endfor %}
 				
+				<h1 class = "output"> My Abandonware </h1>
+				{% for name, link in myabandonware %}	
+				<a href={{link}}>{{name}}</a>
+				<br>
+				{% endfor %}
+
 				<h1 class = "output"> Crackhub </h1>
 				{% for name, link in crackhub %}	
 				<a href={{link}}>{{name}}</a>

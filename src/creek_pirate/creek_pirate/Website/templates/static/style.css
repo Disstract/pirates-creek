@@ -3,7 +3,25 @@ html {
 	font-family: "Inter var", sans-serif;
 }
 
+a:link {
+  color: #92efec;
+  background-color: transparent;
+} 
 
+a:visited {
+color: #6a7ef2;
+}
+
+a:hover {
+color: #92efec;
+}
+
+a:active {
+color: #92efec;
+}  
+  
+  
+  
 body {
 	margin: 0;
 	background: #13131a;

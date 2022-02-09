@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
-
+import os
 from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, gloadFilter, gogGamesFilter, ovagamesFilter, scooter_Filter, myabandonwareFilter, macbed_Filter, oldgamesdownloadFilter
 from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter, gnarlyFilter
+import random, threading, webbrowser
 
 app = Flask(__name__, template_folder='template')
 
@@ -46,7 +47,13 @@ def result():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=3912, debug=True)
+
+    port = 5000 + random.randint(0, 999)
+    url = "http://127.0.0.1:{0}".format(port)
+
+    threading.Timer(1.25, lambda: webbrowser.open(url)).start()
+
+    app.run(port=port, debug=False)
 
 
 

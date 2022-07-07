@@ -1,0 +1,10 @@
+
+*.pyc
+python_pirate_creek/src/creek_pirate/.DS_Store
+python_pirate_creek/.DS_Store
+python_pirate_creek/src/.DS_Store
+python_pirate_creek/src/creek_pirate/.DS_Store
+python_pirate_creek/src/creek_pirate/creek_pirate/.DS_Store
+python_pirate_creek/src/creek_pirate/creek_pirate/Website/.DS_Store
+python_pirate_creek/src/creek_pirate/creek_pirate/Website/templates/.DS_Store
+.DS_Store

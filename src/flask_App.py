@@ -4,21 +4,22 @@ from urlTamperable.DirectSites import crackhub_Filter, crackhubScene_Filter, glo
 from urlTamperable.Repacks import chovkaRepackFilter, fitgirlRepackFilter, gnarlyFilter
 import random, threading, webbrowser
 
+# ~ Initialise
 app = Flask(__name__, template_folder='template')
 
-
-# array = ["eeee", "bbbb", "aaaa", "cccc"]
-# array = zip(array[::2], array[1::2])
-
+# ~ Setup the home/index page
 @app.route('/')
 def main():
     return render_template("website.html")
 
 @app.route('/result', methods = ["POST","GET"])
 def result():
-    result = request.form.to_dict()
+    # ~ convert to dictionary 
+    result = request.form.to_dict() 
+    
     result = result["search"]
 
+	# ~ actually perform all the searches
     oldgamesdownloadfilter = oldgamesdownloadFilter.oldgamesdownloadSearch(result)
     
     myabandonware = myabandonwareFilter.myabandonwareSearch(result)
@@ -41,10 +42,12 @@ def result():
 
     macbed = macbed_Filter.macbedSearch(result)
 
+	# ~ add shortcut
     romlink = "#rom"
 
     romtext = "Jump to ROMS/Retro games"
             
+    # ~ render using website.html        
     return render_template("website.html", result = result, romlink = romlink, romtext = romtext, ova=ova, oldgamesdownloadfilter = oldgamesdownloadfilter, myabandonware = myabandonware, crackhub = crackhub, crackhubscene=crackhubscene, gload = gload, scooter = scooter, gnarly = gnarly, gogGames = gogGames, chovka = chovka, macbed = macbed)
 
 
@@ -61,12 +64,12 @@ if __name__ == "__main__":
 
 
 '''
-export FLASK_APP=flask_App.py
-flask run
-or just run thur idle if it doesn't work
-https://python-adv-web-apps.readthedocs.io/en/latest/flask3.html = for css and js folder structure
+Some useful tips for you:
+ - if you're having issues running the app, try:
+ - export FLASK_APP=flask_App.py
+ - flask run
+ - or just run through idle if it doesn't work
 
-
-https://www.knowledgewalls.com/johnpeter/books/good-javascript-examples/how-to-create-multiselect-combobox-with-checkbox-in-javascript-and-html-with-example
+this might be useful(for css and js folder structure): https://python-adv-web-apps.readthedocs.io/en/latest/flask3.html 
 '''
     

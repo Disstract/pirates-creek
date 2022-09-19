@@ -63,6 +63,10 @@ body {
 	animation: floating-secondary 2.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
 }
 
+.outputs {
+	padding-left: 160px;
+}
+
 .output {
 	color: #fae8e0;
 }
